@@ -1,37 +1,122 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eprog TA — HS 2026</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Minimal styling for the Eprog TA site */
 
-<header>
-  <h1>[Your Name]</h1>
-  <p class="subtitle">Teaching Assistant — Introduction to Programming (HS 2026), English Group</p>
-</header>
+:root {
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --bg: #ffffff;
+  --line: #e4e4e4;
+  --accent: #2455e6;
+  --max-width: 720px;
+}
 
-<main>
+* {
+  box-sizing: border-box;
+}
 
-  <section>
-    <h2>Weekly Materials</h2>
-    <ul class="week-list">
-      <li><a href="weeks/week-01.html"><span>Week 1</span><span class="week-topic">TBA</span></a></li>
-    </ul>
-  </section>
+html {
+  height: 100%;
+}
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.name@ethz.ch">your.name@ethz.ch</a></p>
-  </section>
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header, main, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
 
-</main>
+header {
+  padding: 48px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
 
-<footer>
-  <p>Introduction to Programming — HS 2026 — English Group</p>
-</footer>
+header h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
 
-</body>
-</html>
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+main {
+  padding: 32px 0;
+  flex: 1;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.week-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.week-list li:last-child {
+  border-bottom: none;
+}
+
+.week-list a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.week-list a:hover {
+  color: var(--accent);
+}
+
+.week-topic {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+a {
+  color: var(--accent);
+}
+
+a.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+footer {
+  padding: 24px 0 48px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 480px) {
+  header {
+    padding-top: 32px;
+  }
+}
