@@ -28,14 +28,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 header, main, footer {
   max-width: var(--max-width);
   margin: 0 auto;
+  width: 100%;
 }
 
 header {
   padding: 48px 0 24px;
   border-bottom: 1px solid var(--line);
+  text-align: center;
 }
 
 header h1 {
@@ -63,6 +66,7 @@ h2 {
   margin-bottom: 12px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 6px;
+  text-align: center;
 }
 
 ul {
@@ -113,6 +117,7 @@ footer {
   color: var(--muted);
   font-size: 0.85rem;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 @media (max-width: 480px) {
