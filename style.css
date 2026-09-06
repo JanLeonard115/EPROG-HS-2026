@@ -118,6 +118,11 @@ footer {
   text-align: center;
 }
 
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
 @media (max-width: 480px) {
   header {
     padding-top: 32px;
